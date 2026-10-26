@@ -22,8 +22,8 @@ deploy:
   provider: elasticbeanstalk
   edge: true
   region: us-east-2
-  app: YOUR-APP-NAME
-  env: YOUR-ENV-NAME
+  app: swe1-app
+  env: swe1-app-env
   bucket: elasticbeanstalk-us-east-2-382187823280
   on:
     branch: main
