@@ -3,6 +3,10 @@ language: python
 python:
   - "3.9"
 
+env:
+  global:
+    - COVERALLS_SERVICE_NAME=travis-pro
+
 install:
   - pip install -r requirements.txt
 
@@ -18,10 +22,8 @@ deploy:
   provider: elasticbeanstalk
   edge: true
   region: us-east-2
-  app: swe1-app
-  env: swe1-app-env
-    global:
-      - COVERALLS_SERVICE_NAME=travis-pro
-  bucket: elasticbeanstalk-us-east-2-382187823280 
+  app: YOUR-APP-NAME
+  env: YOUR-ENV-NAME
+  bucket: elasticbeanstalk-us-east-2-382187823280
   on:
     branch: main
