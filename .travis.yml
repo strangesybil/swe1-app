@@ -20,6 +20,8 @@ deploy:
   region: us-east-2
   app: swe1-app
   env: swe1-app-env
+    global:
+      - COVERALLS_SERVICE_NAME=travis-pro
   bucket: elasticbeanstalk-us-east-2-382187823280 
   on:
     branch: main
